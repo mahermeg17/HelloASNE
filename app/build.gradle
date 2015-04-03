@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.maher.helloasne"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.github.asne:asne-facebook:0.3.1'
+    compile 'com.github.asne:asne-twitter:0.3.1'
+    compile 'com.github.asne:asne-googleplus:0.3.1'
+    compile 'com.github.asne:asne-linkedin:0.3.1'
+    compile 'com.github.asne:asne-instagram:0.3.1'
+    compile 'com.github.asne:asne-vk:0.3.1'
+    compile 'com.github.asne:asne-odnoklassniki:0.3.1'
+    compile group:'com.squareup.picasso', name:'picasso', version:'2.3.2'
+}
